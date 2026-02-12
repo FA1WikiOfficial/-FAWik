@@ -141,5 +141,17 @@
             document.getElementById('dog-ui').style.display = 'none';
         }
     </script>
+<audio id="bgm" loop>
+  <source src="https://share.krmp.cc/mp3/jingwei-dj.mp3" type="audio/mpeg">
+
+
+<script>
+document.addEventListener('click', function(){
+  let bgm = document.getElementById('bgm');
+  bgm.volume = 0.7;
+  bgm.play();
+});
+</script>
 </body>
 </html>
+
