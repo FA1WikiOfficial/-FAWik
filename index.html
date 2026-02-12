@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FA维基官方站点</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "微软雅黑", "Microsoft YaHei", sans-serif;
+            background: url("https://view.moezx.cc/images/2018/09/20/69169940_p0.png") no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .title {
+            font-size: 28px;
+            color: #222;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .content {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .content-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background: #fff;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            margin:5px;
+        }
+
+        .btn:hover {
+            background: #f5f5f5;
+            border-color: #ccc;
+        }
+
+        /* 新UI默认隐藏 */
+        .new-ui, .dog-ui {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- 原始UI -->
+        <div id="original-ui">
+            <h1 class="title">FA维基官方站点</h1>
+            <div class="content">
+                网站开发者：李诗痕<br>
+                联机圈頂點-FA官方站點<br><br>
+                <img class="content-img" src="https://view.moezx.cc/images/2018/09/20/69169940_p0.png" alt="冲田总司">
+                <button class="btn" onclick="switchToNewUI()">查看历史</button>
+                <button class="btn" onclick="switchToDogUI()">毒瘤方块人狗户</button>
+            </div>
+        </div>
+
+        <!-- 新UI：FA伟大历史 -->
+        <div id="new-ui" class="new-ui">
+            <h1 class="title">FA伟大历史</h1>
+            <div class="content">
+                25年由随风创建联机圈维基<br>
+                做行侠仗义之事<br>
+                清扫联机圈毒瘤及祸害<br>
+                也是联机圈内最神秘的团体<br><br>
+                <button class="btn" onclick="switchToOriginalUI()">返回首页</button>
+            </div>
+        </div>
+
+        <!-- 新增：毒瘤方块人狗户页面 -->
+        <div id="dog-ui" class="dog-ui">
+            <h1 class="title">毒瘤方块人狗户</h1>
+            <div class="content">
+                <img class="content-img" src="https://p.qqan.com/up/2025-10/1730470822511211.jpg" alt="穆弈辰相关">
+                <img class="content-img" src="https://p.qqan.com/up/2025-10/1730470823123456.jpg" alt="宋文杰/李昱辉相关">
+                <img class="content-img" src="https://p.qqan.com/up/2025-10/1730470823987654.jpg" alt="刘楠/痛泪相关">
+                <br>
+                <button class="btn" onclick="switchToOriginalUI()">返回首页</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 切换到历史页面
+        function switchToNewUI() {
+            document.getElementById('original-ui').style.display = 'none';
+            document.getElementById('new-ui').style.display = 'block';
+            document.getElementById('dog-ui').style.display = 'none';
+        }
+
+        // 切换到毒瘤方块人狗户页面
+        function switchToDogUI() {
+            document.getElementById('original-ui').style.display = 'none';
+            document.getElementById('new-ui').style.display = 'none';
+            document.getElementById('dog-ui').style.display = 'block';
+        }
+
+        // 切换回首页
+        function switchToOriginalUI() {
+            document.getElementById('original-ui').style.display = 'block';
+            document.getElementById('new-ui').style.display = 'none';
+            document.getElementById('dog-ui').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
